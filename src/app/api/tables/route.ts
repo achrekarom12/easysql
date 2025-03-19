@@ -7,7 +7,7 @@ export async function GET() {
     return NextResponse.json(result);
   } catch (error) {
     return NextResponse.json(
-      { success: false, message: 'Internal server error' },
+      { success: false, message: 'Internal server error', error: error },
       { status: 500 }
     );
   }
